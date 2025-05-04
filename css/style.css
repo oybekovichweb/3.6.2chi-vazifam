@@ -6,3 +6,101 @@
     box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #edf2f8;
+  padding: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+.card {
+  padding: 24px;
+  border-radius: 8px;
+  color: #fff;
+  box-shadow: 0 40px 60px -20px rgba(72, 85, 86, 0.25);
+}
+
+.card h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card .title {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.card .desc {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+
+.purple {
+  background-color: #733fc8;
+}
+
+.gray {
+  background-color: #48556a;
+}
+
+.dark {
+  background-color: #19202d;
+}
+
+.white {
+  background-color: #ffffff;
+  color: #48556a;
+}
+
+
+.tall {
+  max-width: 320px;
+  width: 100%;
+  grid-row: span 2;
+}
+
+.wide {
+  grid-column: span 1;
+}
+
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tall,
+  .wide {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
